@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
-    "format": "prettier --check .",
+    "lint": "npx eslint .",
+    "format": "npx prettier --check .",
     "test": "jest --coverage"
   },
   "repository": {
