@@ -14,8 +14,14 @@ runs:
 
     - name: Install dependencies
       run: npm install
-      shell: bash  # <-- ADD THIS
+      shell: bash
 
     - name: Run ESLint
-      run: npx eslint .
-      shell: bash  # <-- ADD THIS
+      run: npx eslint . --ext .js
+      shell: bash
+      working-directory: ${{ github.workspace }}  # <-- ENSURE working directory
+
+    - name: Run Prettier
+      run: npx prettier --check .
+      shell: bash
+      working-directory: ${{ github.workspace }}
