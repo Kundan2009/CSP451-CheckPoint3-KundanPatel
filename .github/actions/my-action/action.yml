@@ -17,5 +17,5 @@ runs:
       shell: bash  # <-- ADD THIS
 
     - name: Run ESLint
-      run: npm run lint
+      run: npx eslint .
       shell: bash  # <-- ADD THIS
